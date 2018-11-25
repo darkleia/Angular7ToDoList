@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+  background: rgba(0,0,0,.03);
+}
+
+span, p, div, .mat-icon {
+  color: rgba(0,0,0,.54);
+}
+
+div, span, p {
+  font-family: Raleway, sans-serif;
+}

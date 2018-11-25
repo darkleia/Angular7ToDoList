@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-lg-1 col-md-1 col-sm-1">
+    <mat-checkbox class="to-do-checkbox" [checked]="done" (change)="statusChanged(id)">
+    </mat-checkbox>
+  </div>
+  <div class="col-lg-9 col-md-9 col-sm-9">{{ toDoItemText }}</div>
+  <div class="col-lg-2 col-md-2 col-sm-2 text-right">
+    <button mat-icon-button [disabled]="true">
+      <mat-icon  matTooltip="{{dateCreated | date : 'short'}}">calendar_today</mat-icon>
+    </button>
+    <button mat-icon-button (click)="removeItem(id)">
+      <mat-icon aria-label="Example icon-button with a heart icon">delete_forever</mat-icon>
+    </button>
+  </div>
+</div>
+

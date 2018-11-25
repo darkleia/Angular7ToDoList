@@ -1,0 +1,18 @@
+.example-card {
+}
+
+.example-header-image-today {
+  background-image: url('https://img.talkandroid.com/uploads/2015/07/Accomplish-icon.png');
+  background-size: cover;
+}
+
+.example-header-image-all {
+  background-image: url('https://www.freeiconspng.com/uploads/calendar-image-png-20.png');
+  background-size: cover;
+}
+
+:host {
+  margin: 10px;
+}
+
+

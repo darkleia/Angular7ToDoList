@@ -1,0 +1,20 @@
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar [ngClass]="{'example-header-image-today': listName === 'Today Tasks', 'example-header-image-all': listName === 'All Tasks'}"></div>
+      <mat-card-title>{{ listName }}</mat-card-title>
+      <mat-card-subtitle>{{ listDescription }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let i of toDoList">
+          <app-to-do-item class="container-fluid" [toDoItemText]="i.text" [done]="i.done" [dateCreated]="i.dateCreated" [id]="i.id"></app-to-do-item>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-actions>
+      <button mat-button color="primary" *ngIf="showAddItemBtn" (click)="openAddItemForm()">ADD A NEW ITEM</button>
+      <app-add-to-do-item *ngIf="showAddItemForm" [showDatePicker]="showDatePicker" (toDoItemAdded)="hideAddItemForm()"></app-add-to-do-item>
+    </mat-card-actions>
+  </mat-card>
